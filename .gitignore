@@ -1,33 +1,10 @@
-# Logs and screenshots
-logs/
-*.log
-*.png
-*.html
-
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
 
 # Virtual Environment
+.venv/
 venv/
 ENV/
 
@@ -43,11 +20,10 @@ Thumbs.db
 
 # Project specific
 config.yml
-visa_scheduler.log
+.env
+logs/
 *.log
-geckodriver.log
-chromedriver.log
-edgedriver.log
+browser/drivers/
 
 # Browser drivers
 chromedriver
@@ -55,41 +31,12 @@ geckodriver
 msedgedriver
 *.exe
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+# Service files
+*.service
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
+# Debug files
+*.png
+*.html
+page_source_*.html
+login_error_*.png
+page_state_*.png
