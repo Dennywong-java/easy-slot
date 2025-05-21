@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+config.yml
+.env
+logs/
+*.log
+browser/drivers/
+
+# Browser drivers
+chromedriver
+geckodriver
+msedgedriver
+*.exe
+
+# Service files
+*.service
+
+# Debug files
+*.png
+*.html
+page_source_*.html
+login_error_*.png
+page_state_*.png
