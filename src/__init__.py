@@ -1,8 +1,8 @@
-"""Easy-slot package for visa appointment scheduling automation."""
+"""Appointment scheduling automation package for consular services."""
 
-from .scheduler import VisaScheduler
+from .scheduler import AppointmentScheduler
 from .utils.logging_config import setup_logging
 
-__all__ = ["VisaScheduler", "setup_logging"]
+__all__ = ["AppointmentScheduler", "setup_logging"]
 
 __version__ = "1.0.0"

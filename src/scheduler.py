@@ -1,4 +1,4 @@
-"""Visa appointment scheduler module."""
+"""Appointment scheduling automation module."""
 
 from datetime import datetime
 import logging
@@ -17,8 +17,8 @@ from .notification.notification_handler import NotificationHandler
 from .utils.date_utils import DateUtils
 
 
-class VisaScheduler:
-    """Main class for handling visa appointment scheduling."""
+class AppointmentScheduler:
+    """Main class for handling consular appointment scheduling."""
 
     def __init__(self, config_path="config.yml"):
         """Initialize the scheduler with configuration.
@@ -44,7 +44,7 @@ class VisaScheduler:
         self.logs_dir.mkdir(exist_ok=True)
 
         # Configure logging to write to file in logs directory
-        log_file = self.logs_dir / "visa_scheduler.log"
+        log_file = self.logs_dir / "scheduler.log"
 
         # Configure logging to append rather than overwrite
         logging.basicConfig(
@@ -147,7 +147,7 @@ class VisaScheduler:
 
     @retry(TimeoutException, tries=3, delay=2)
     def login(self):
-        """Log in to the visa appointment system."""
+        """Log in to the appointment system."""
         logging.info("Attempting to log in...")
         try:
             # Load the login page

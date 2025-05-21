@@ -33,7 +33,7 @@ class NotificationHandler:
             msg = MIMEMultipart()
             msg["From"] = self.smtp_config.get("username")
             msg["To"] = ", ".join(self.recipients)
-            msg["Subject"] = "Visa Appointment Notification"
+            msg["Subject"] = "Appointment Notification"
             msg.attach(MIMEText(message, "plain"))
 
             with smtplib.SMTP(self.smtp_config.get("server"), self.smtp_config.get("port")) as server:

@@ -1,13 +1,13 @@
-"""Main entry point for the visa appointment scheduler."""
+"""Main entry point for the appointment scheduler."""
 
-from .scheduler import VisaScheduler
+from .scheduler import AppointmentScheduler
 from .utils.logging_config import setup_logging
 
 
 def main():
     """Execute the main program logic."""
     setup_logging()
-    scheduler = VisaScheduler()
+    scheduler = AppointmentScheduler()
     scheduler.run()
 
 
