@@ -1,0 +1,45 @@
+credentials:
+  email: "your-email@example.com"
+  password: "your-password"
+
+appointment:
+  ivr_number: "32114608"  # Your IVR Account Number
+  preferred_cities:
+    - "Toronto"
+    - "Vancouver"
+    - "Calgary"
+  
+  date_range:
+    start_date: "2024-03-20"  # Earliest acceptable date
+    end_date: "2024-12-31"    # Latest acceptable date
+  
+  auto_book: false  # Set to true for automatic booking, false for notification only
+
+monitoring:
+  check_interval: 300  # Time between checks in seconds (5 minutes)
+  retry_interval: 60   # Time to wait after errors in seconds
+
+notifications:
+  gmail:
+    enabled: true
+    email: "your-gmail@gmail.com"
+    app_password: "your-16-digit-app-password"
+    recipient_email: "recipient@email.com"
+
+browser:
+  # Supported types: chrome, firefox, edge, safari
+  type: "firefox"  # Recommended: Use Firefox for better stability
+  headless: true   # Run browser in headless mode (not supported in Safari)
+  
+  options:
+    chrome:
+      use_existing: false  # Set to true to use locally installed ChromeDriver
+      binary_location: ""  # Optional: Path to Chrome binary
+    
+    firefox:
+      use_existing: false  # Set to false to auto-download GeckoDriver
+      binary_location: ""  # Optional: Path to Firefox binary
+    
+    edge:
+      use_existing: false  # Set to false to auto-download EdgeDriver
+      binary_location: ""  # Optional: Path to Edge binary 
