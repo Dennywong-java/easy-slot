@@ -1,0 +1,37 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: easy-slot
+  profiles:
+    active: dev
+  output:
+    ansi:
+      enabled: always
+
+logging:
+  level:
+    root: INFO
+    com.easyslot: INFO
+    org.springframework: WARN
+    org.hibernate: WARN
+  file:
+    name: logs/easy-slot.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) %magenta([%thread]) %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+config:
+  path: config.yml 

@@ -1,0 +1,68 @@
+# Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.iml
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+config.yml
+.env
+logs/
+*.log
+browser/drivers/
+
+# Browser drivers
+chromedriver
+geckodriver
+msedgedriver
+*.exe
+
+# Service files
+*.service
+
+# Debug files
+*.png
+*.html
+page_source_*.html
+login_error_*.png
+page_state_*.png
+state/
+
+# PID file
+.pid
+
+# Thrift generated files
+target/generated-sources/thrift/
+
+# sh files
+*.sh

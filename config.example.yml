@@ -1,0 +1,44 @@
+# Configuration file example - Single-user mode
+
+# Monitoring settings
+monitoring:
+  checkIntervalSeconds: 300  # Check interval in seconds
+  errorRetryIntervalSeconds: 60   # Error retry interval in seconds
+  maxRetries: 3  # Maximum retries
+
+# Browser settings
+browser:
+  type: "chrome"  # Recommended: Use Chrome for better stability
+  headless: true   # Whether to run browser in headless mode
+  # binaryLocation: "/path/to/chrome"  # Optional: Custom browser path
+
+# Debug settings
+debug:
+  enabled: false  # Whether to enable debug mode
+  saveScreenshots: true  # Whether to save screenshots
+  saveHtml: true  # Whether to save HTML source
+  sendEmailNotifications: false  # Whether to send debug email notifications
+  emailIntervalSeconds: 300  # Debug email sending interval (seconds)
+
+# Notification settings
+notification:
+  gmail:
+  enabled: true
+    email: "your.sender.email@gmail.com"
+    appPassword: "your_app_password"  # Gmail app password
+    recipientEmail: "your.recipient.email@example.com"
+
+# User configuration
+users:
+  your.email@example.com:
+    email: "your.email@example.com"
+    password: "your_password"
+    appointment:
+      ivrNumber: "12345678"  # Visa account number
+      location: "Toronto"  # City, such as Toronto, Vancouver, etc.
+      startDate: "2024-03-20"  # Earliest acceptable date
+      endDate: "2024-12-31"    # Latest acceptable date
+      preferredCities:
+        - "Toronto"
+        # - "Vancouver"  # Can add multiple cities
+      autoBook: false  # Set to true for automatic booking, false for notification only
